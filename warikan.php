@@ -2,6 +2,7 @@
 //合計算出
 function sum($cart)
 {
+    var_dump($cart);
     $sum = 0;
     /* ここにコードを追加しましょう */
     return $sum;
@@ -24,7 +25,7 @@ if ($json === false) {
 $warikan = json_decode($json, true);
 
 //合計
-$sum = sum(/* ここにコードを追加しましょう */);
+$sum = sum($warikan);
 //1人辺りの金額
 $per = moneyPerPerson(/* ここにコードを追加しましょう */);
 
