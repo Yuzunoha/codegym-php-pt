@@ -18,7 +18,7 @@ const JSON_FILE = './warikan.json';    //JSONファイル
 
 $json = file_get_contents('./warikan.json');
 
-if ($json === 1/* ここにコードを追加しましょう */) {
+if ($json === false) {
     echo 'ファイル入力エラー: ' . JSON_FILE . 'が見つかりません。';
 }
 $warikan = json_decode($json, true);
