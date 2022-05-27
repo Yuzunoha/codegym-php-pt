@@ -2,9 +2,12 @@
 //合計算出
 function sum($cart)
 {
-    var_dump($cart);
+    $cartArray = $cart['cart'];
     $sum = 0;
-    /* ここにコードを追加しましょう */
+    foreach ($cartArray as $item) {
+        $price = $item['単価'];
+        $sum += $price;
+    }
     return $sum;
 }
 
@@ -12,6 +15,7 @@ function sum($cart)
 function moneyPerPerson($sum, $people)
 {
     /* ここにコードを追加しましょう */
+    // 引数 $people は人数を表す整数である
     return $per;
 }
 
@@ -27,7 +31,7 @@ $warikan = json_decode($json, true);
 //合計
 $sum = sum($warikan);
 //1人辺りの金額
-$per = moneyPerPerson(/* ここにコードを追加しましょう */);
+$per = moneyPerPerson($sum, $cart['people']);
 
 echo '合計金額は' . $sum . '円です。';
 echo '<br>';
