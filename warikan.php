@@ -1,13 +1,15 @@
 <?php
 //合計算出
-function sum ($cart) {
+function sum($cart)
+{
     $sum = 0;
     /* ここにコードを追加しましょう */
     return $sum;
 }
 
 //1人あたりの金額算出
-function moneyPerPerson ($sum, $people) {
+function moneyPerPerson($sum, $people)
+{
     /* ここにコードを追加しましょう */
     return $per;
 }
@@ -15,7 +17,8 @@ function moneyPerPerson ($sum, $people) {
 const JSON_FILE = './warikan.json';    //JSONファイル
 
 $json = file_get_contents('./warikan.json');
-if ($json === /* ここにコードを追加しましょう */) {
+
+if ($json === 1/* ここにコードを追加しましょう */) {
     echo 'ファイル入力エラー: ' . JSON_FILE . 'が見つかりません。';
 }
 $warikan = json_decode($json, true);
@@ -28,4 +31,3 @@ $per = moneyPerPerson(/* ここにコードを追加しましょう */);
 echo '合計金額は' . $sum . '円です。';
 echo '<br>';
 echo '1人あたりの金額は' . $per . '円です。';
-
